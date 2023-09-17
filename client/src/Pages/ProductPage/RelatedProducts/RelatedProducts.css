@@ -1,0 +1,10 @@
+.related-products{
+    padding: 0 18px;
+}
+.related-products > div:nth-child(1) div{
+    width: 60px;
+    border: 2px solid #8e2de2;
+}
+.related-products > div:nth-child(2){
+    margin: 0 -18px;
+}

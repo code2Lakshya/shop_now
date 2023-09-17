@@ -1,0 +1,104 @@
+.hero-wrapper{
+    width: 100%;
+    background-image: linear-gradient(to right,#8e2de2,#4a00e0);
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    overflow: hidden;
+    height:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 30px 20px;
+    height: calc(100vh - 40px);
+    min-height: 100%;
+}
+.hero-content{
+    text-align: center;
+    width: min-content;
+}
+.hero-content h1{
+    font-size: 150px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.hero-content p{
+    font-weight: 500;
+}
+.hero-btn{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.hero-btn button{
+    padding: 10px 13px;
+    font-size: 14px;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+} 
+.hero-btn button:first-of-type{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: all 0.2s;
+}
+.hero-btn button:first-of-type:hover{
+    background-color: rgb(165, 164, 164);
+    color: black;
+}
+.hero-btn button:last-of-type{
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    transition: all 0.2s;
+}
+.hero-btn button:last-of-type:hover{
+    background-color: rgb(165, 164, 164);
+    border: 1px solid white;
+    color: white;
+}
+.hero-container > img{
+     width: 500px;
+}
+
+@media screen and (max-width: 1021px){
+    .hero-content + img{
+        width: 400px;
+    }
+    .hero-content h1{
+        font-size: 130px;
+    }
+}
+@media screen and (max-width: 840px){
+    .hero-container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 100%;
+        padding: 10px;
+        padding-bottom: 15px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .hero-content + img{
+        width: 200px;
+    }
+    .hero-content h1{
+        font-size: 90px;
+    }
+    .hero-wrapper{
+        display: flex;
+        align-items: center;
+    }
+}

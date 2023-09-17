@@ -1,0 +1,31 @@
+.products-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 20px 18px;
+}
+.section-heading{  
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+}
+.section-heading::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width:50px;
+    border: 2px solid #8e2ede;
+} 
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+@media screen and (max-width: 550px ){
+    .section-heading{
+        font-size: 20px;
+    }
+}

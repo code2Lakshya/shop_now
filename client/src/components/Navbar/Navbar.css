@@ -1,0 +1,97 @@
+nav{
+    width: 100vw;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+nav.sticky{
+    position: fixed;
+    top: 0px;
+    animation: stickyBar 0.3s ease-in;
+}
+@keyframes stickyBar{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 18px;
+    align-items: center;
+    font-size: 16px;
+    position: relative;
+}
+.navbar .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 28px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar .left{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.left li{
+    font-size: 14px;
+}
+.navbar .right{
+    display: flex;
+    list-style: none;
+    position: relative;
+    gap:20px;
+    font-size: 22px;
+}
+.navbar .right li,
+.navbar .left li,
+.navbar .center{
+    cursor: pointer;
+}
+.navbar .right li:nth-child(3) span{
+    position: absolute;
+    right:-8px;
+    top:-13px;
+    background-color: #8e2de2;
+    border-radius: 50%;
+    font-size: 13px;
+    padding:1px 5px;
+    animation: bounce 1.3s ease-in  infinite forwards;
+}
+@keyframes bounce {
+    0%{
+        top:-13px;
+    }
+    50%{
+        top:-9px;
+    }
+    100%{
+        top:-13px;
+    }
+}
+
+@media screen and (max-width: 756px) {
+     .navbar{
+        padding: 14px;
+        justify-content: flex-end;
+     }    
+     .navbar .left{
+        display: none;
+     }
+     .navbar .center{
+        left: 20px;
+        transform: unset;
+     }
+}
